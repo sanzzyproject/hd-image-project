@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD Image Enhancer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>AI Photo Enhancer</h1>
+            <p>Ubah foto buram menjadi HD dengan sekali klik.</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="imageUrl">Masukkan URL Gambar</label>
+                <input type="text" id="imageUrl" placeholder="https://contoh.com/gambar.jpg">
+            </div>
+
+            <div class="divider">ATAU</div>
+
+            <div class="input-group">
+                <label for="imageFile">Upload Gambar</label>
+                <input type="file" id="imageFile" accept="image/*">
+            </div>
+
+            <button id="enhanceBtn" onclick="processImage()">Perjelas Foto (HD)</button>
+            <p id="statusText" class="status"></p>
+        </div>
+
+        <div id="resultContainer" class="result-container hidden">
+            <div class="image-box">
+                <h3>Original</h3>
+                <img id="imgInput" src="" alt="Input">
+            </div>
+            <div class="image-box">
+                <h3>Enhanced (HD)</h3>
+                <img id="imgOutput" src="" alt="Output">
+                <a id="downloadLink" href="#" target="_blank" class="download-btn">Download HD</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
